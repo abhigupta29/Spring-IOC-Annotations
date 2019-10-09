@@ -9,7 +9,7 @@ public class SpringApp {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		// Load bean
-		Coach coach = context.getBean("myTennisCoach", Coach.class);
+		Coach coach = context.getBean("tennisCoach", Coach.class);
 		
 		// Execute bean methods
 		System.out.println(coach.doWorkout());
