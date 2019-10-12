@@ -9,10 +9,10 @@ public class TennisCoach implements Coach {
 	private Fortune fortune;
 	
 	@Autowired
-	public TennisCoach(Fortune fortune) {
+	public void setFortune(Fortune fortune) {
 		this.fortune = fortune;
 	}
-	
+
 	@Override
 	public String doWorkout() {
 		return "Do 45 mins of backhand volley practice..";
