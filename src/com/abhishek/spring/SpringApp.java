@@ -14,6 +14,8 @@ public class SpringApp {
 		// Execute bean methods
 		System.out.println(coach.doWorkout());
 		
+		System.out.println(coach.getDailyFortune());
+		
 		// Close context
 		context.close();
 		
