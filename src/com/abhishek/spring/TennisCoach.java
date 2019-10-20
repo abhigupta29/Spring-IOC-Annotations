@@ -1,12 +1,15 @@
 package com.abhishek.spring;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("prototype")
+//@Scope("prototype")
 public class TennisCoach implements Coach {
 
 	// Field Injection
@@ -44,4 +47,13 @@ public class TennisCoach implements Coach {
 		return fortune.getDailyFortune();
 	}
 
+	@PostConstruct
+	public void doSomeStartupStuff() {
+		System.out.println("TennisCoach: Inside doSomeStartupStuff");
+	}
+	
+	@PreDestroy
+	public void doSomeCleanupStuff() {
+		System.out.println("TennisCoach: Inside doSomeCleanupStuff");
+	}
 }
