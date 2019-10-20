@@ -27,6 +27,9 @@ public class TennisCoach implements Coach {
 		this.fortune = fortune;
 	}
 	*/
+	public TennisCoach() {
+		System.out.println("TennisCoach: Inside default Constructor");
+	}
 
 	@Override
 	public String doWorkout() {
